@@ -22,10 +22,10 @@ Foi desenvolvido seguindo arquitetura em camadas, boas práticas de código e pr
 
 O projeto está dividido em camadas:
 
-- **ProductManager.API** — Controllers e configuração do Swagger
-- **ProductManager.Application** — DTOs, Services e regras de negócio
-- **ProductManager.Domain** — Entidades, Enums e interfaces
-- **ProductManager.Infrastructure** — Acesso ao banco de dados com Entity Framework
+- **ProductManager.API** - Controllers e configuração do Swagger
+- **ProductManager.Application** - DTOs, Services e regras de negócio
+- **ProductManager.Domain** - Entidades, Enums e interfaces
+- **ProductManager.Infrastructure** - Acesso ao banco de dados com Entity Framework
 
 A ideia dessa separação é que cada camada tenha sua responsabilidade. O Domain não conhece o banco de dados, e a API não acessa o banco diretamente. Tudo passa pelo Service e pelo Repository.
 
@@ -53,20 +53,20 @@ docker compose down
 
 ## Endpoints
 
-- `POST /api/products` — Cadastrar produto
-- `GET /api/products` — Listar produtos (aceita filtros por query string)
-- `GET /api/products/{id}` — Buscar produto por ID
-- `PUT /api/products/{id}` — Editar produto
-- `DELETE /api/products/{id}` — Excluir produto
-- `POST /api/products/{id}/image` — Upload de imagem
+- `POST /api/products` - Cadastrar produto
+- `GET /api/products` - Listar produtos (aceita filtros por query string)
+- `GET /api/products/{id}` - Buscar produto por ID
+- `PUT /api/products/{id}` - Editar produto
+- `DELETE /api/products/{id}` - Excluir produto
+- `POST /api/products/{id}/image` - Upload de imagem
 
 ### Filtros na listagem
 
 Exemplo: `/api/products?category=Periféricos&minPrice=50&maxPrice=300&status=1`
 
-- `category` — filtrar por categoria
-- `minPrice` e `maxPrice` — faixa de preço
-- `status` — 1 para Ativo, 2 para Inativo
+- `category` - filtrar por categoria
+- `minPrice` e `maxPrice` - faixa de preço
+- `status` - 1 para Ativo, 2 para Inativo
 
 ## Testes
 
