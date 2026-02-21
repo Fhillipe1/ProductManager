@@ -1,0 +1,19 @@
+## .NET
+**/bin/
+**/obj/
+
+## IDE
+.vs/
+*.user
+*.suo
+
+## Uploads
+**/Uploads/*
+!**/Uploads/.gitkeep
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Secrets
+appsettings.Development.json
